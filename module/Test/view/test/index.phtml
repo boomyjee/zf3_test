@@ -1,0 +1,18 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <? foreach ($items as $item): ?>
+            <tr>
+                <td class="id"><?= $item->getId() ?></td>
+                <td class="name"><?= htmlspecialchars($item->getName(), ENT_QUOTES) ?></td>
+                <td class="action"><a href="<?= $this->url('items', ['action' => 'view', 'id' => $item->getId()]) ?>">View</a></td>
+            </tr>
+        <? endforeach ?>
+    </tbody>
+</table>

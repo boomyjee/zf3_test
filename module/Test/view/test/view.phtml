@@ -1,0 +1,13 @@
+<? $title = 'Item details' ?>
+<? $this->headTitle($title); ?>
+
+<h1><?= $this->escapeHtml($title) ?></h1>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Item #<?= $item->getId() ?></h3>
+    </div>
+    <div class="panel-body">
+        The name of the item is <strong><?= htmlspecialchars($item->getName(), ENT_QUOTES) ?></strong>
+    </div>
+</div>
